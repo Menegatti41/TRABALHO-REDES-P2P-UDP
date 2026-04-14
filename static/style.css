@@ -1,0 +1,133 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #d1d7db; margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh; }
+.app-container { width: 90%; max-width: 900px; height: 90vh; background: #f0f2f5; display: flex; flex-direction: column; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden; }
+
+/* Headers */
+.header { background: #008069; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+.login-bar { background: #f6f6f6; padding: 10px 20px; border-bottom: 1px solid #ddd; display: flex; gap: 10px; }
+input, select, button { padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+button { background: #008069; color: white; border: none; cursor: pointer; font-weight: bold; }
+button:hover { background: #005e4d; }
+
+/* Chat Area */
+.chat-window { flex: 1; overflow-y: auto; padding: 20px; background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); background-repeat: repeat; }
+.message { margin-bottom: 10px; padding: 8px 12px; border-radius: 8px; max-width: 70%; position: relative; cursor: pointer; transition: transform 0.1s; }
+.message:active { transform: scale(0.98); }
+.message.EU { background: #dcf8c6; align-self: flex-end; margin-left: auto; }
+.message.OTHER { background: #ffffff; align-self: flex-start; }
+.message.selected { 
+    outline: 3px solid #34b7f1; /* Substitua 'ring' por 'outline' */
+    box-shadow: 0 0 10px #34b7f1; 
+}
+.time { font-size: 0.7em; color: #666; display: block; text-align: right; margin-top: 4px; }
+
+/* Input Footer */
+.footer { background: #f0f2f5; padding: 15px; display: flex; gap: 10px; align-items: center; }
+#mensagem { flex: 1; border-radius: 20px; padding: 10px 20px; }
+
+/* Forwarding Panel */
+#panel-encaminhar { display: none; background: #e7f3ff; padding: 15px; border-top: 2px solid #34b7f1; flex-direction: column; gap: 10px; }
+.fw-info { font-style: italic; color: #555; font-size: 0.9em; }
+
+/* Layout Principal */
+.app-wrapper {
+    display: flex;
+    width: 95vw;
+    max-width: 1200px;
+    height: 90vh;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+    width: 30%;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f0f2f5;
+}
+
+/* Lista de Usuários */
+.sidebar-header {
+    background: #f0f2f5;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.user-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f2f5;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-item:hover { background: #f5f6f6; }
+.user-item.active { background: #ebebeb; border-left: 5px solid #00a884; }
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: #008069;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Ajuste na janela de chat (imagem de fundo) */
+.chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #efeae2;
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    display: flex;
+    flex-direction: column;
+}
+
+.message.selected { 
+    outline: 3px solid #34b7f1; 
+    box-shadow: 0 0 10px #34b7f1; 
+}
+
+.user-profile-header {
+    background: #f0f2f5;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-profile-header .label {
+    display: block;
+    font-size: 0.75rem;
+    color: #667781;
+}
+
+.user-profile-header strong {
+    font-size: 1.1rem;
+    color: #111b21;
+}
+
+#meu-avatar {
+    background: #00a884; /* Cor diferente para o seu próprio avatar */
+}

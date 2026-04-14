@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat P2P Pro</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="sidebar">
+    <div class="user-profile-header">
+        <div class="user-avatar" id="meu-avatar">?</div>
+        <div class="user-info">
+            <span class="label">Conectado como:</span>
+            <strong id="meu-nome-display">---</strong>
+        </div>
+    </div>
+    
+    <div class="sidebar-header">
+        <h3>Contatos Online</h3>
+    </div>
+    <div id="lista-usuarios" class="user-list"></div>
+</div>
+
+    <div class="main-content">
+        <div class="header">
+            <span id="chat-com-titulo">Selecione um contato</span>
+            <div id="status">Desconectado</div>
+        </div>
+
+        <div class="login-bar">
+            <input type="text" id="nome" placeholder="Seu nome">
+            <button onclick="iniciar()">Entrar no Chat</button>
+        </div>
+
+        <div class="chat-window" id="chat"></div>
+
+        <div id="panel-encaminhar">
+            <div class="fw-info" id="fw-msg-preview"></div>
+            <div style="display:flex; gap:10px;">
+                <input type="text" id="msg-comentario" placeholder="Nota de encaminhamento..." style="flex:1">
+                <button onclick="confirmarEncaminhamento()" style="background:#34b7f1">Enviar</button>
+                <button onclick="cancelarEncaminhamento()" style="background:#ea4335">X</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <input type="text" id="mensagem" placeholder="Digite uma mensagem" onkeypress="handleKey(event)">
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+    </div>
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
